@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/flask
-# Edit at https://www.toptal.com/developers/gitignore?templates=flask
+# Created by https://www.toptal.com/developers/gitignore/api/flask,react
+# Edit at https://www.toptal.com/developers/gitignore?templates=flask,react
 
 ### Flask ###
 instance/*
@@ -167,4 +167,19 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# End of https://www.toptal.com/developers/gitignore/api/flask
+### react ###
+.DS_*
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+# End of https://www.toptal.com/developers/gitignore/api/flask,react
