@@ -18,13 +18,13 @@ def upload():
     s3_destination_path = "models/01/dummy.keras"
     return utils.upload_to_s3(app, source_path, s3_destination_path)
 
-@app.route("/get_image")
+@app.route("/get_images")
 def get_image():
-    s3_source_path = "datasets/test/daisy/10172379554_b296050f82_n.jpg"
-    img = utils.fetch_image(app, s3_source_path)
-    return "<p>Success!</p>"
+    images, labels = utils.get_images_and_labels_from_s3(app, 1)
+    print(len(images))
+    print(len(labels))
 
-@app.route("/list")
-def list_out():
-    res = utils.list_files_in_dataset(app, "test")
-    return '\n'.join(res)
+    print(images[0])
+    print(labels[0])
+
+    return "<p>Success!</p>"
