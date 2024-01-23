@@ -6,8 +6,13 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+numpy = "*"
 flask = "*"
+keras = "*"
+tensorflow = "*"
 boto3 = "*"
+pillow = "*"
+mypy-boto3-s3 = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.11"

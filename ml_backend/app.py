@@ -17,3 +17,14 @@ def upload():
     source_path = "tmp/dummy.keras"
     s3_destination_path = "models/01/dummy.keras"
     return utils.upload_to_s3(app, source_path, s3_destination_path)
+
+@app.route("/get_images")
+def get_image():
+    images, labels = utils.get_images_and_labels_from_s3(app, 1)
+    print(len(images))
+    print(len(labels))
+
+    print(images[0])
+    print(labels[0])
+
+    return "<p>Success!</p>"
